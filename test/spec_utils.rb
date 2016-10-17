@@ -461,8 +461,8 @@ describe Rack::Utils do
     Rack::Utils.status_code(:ok).must_equal 200
   end
 
-  it "return rfc2822 format from rfc2822 helper" do
-    Rack::Utils.rfc2822(Time.at(0).gmtime).must_equal "Thu, 01 Jan 1970 00:00:00 -0000"
+  it "return rfc2616 format from rfc2616 helper" do
+    Rack::Utils.rfc2822(Time.at(0).gmtime).must_equal "Thu, 01 Jan 1970 00:00:00 GMT"
   end
 
   it "return rfc2109 format from rfc2109 helper" do
